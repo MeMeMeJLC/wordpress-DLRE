@@ -75,6 +75,42 @@ class Realia_Post_Type_Property {
 	 * @return array
 	 */
 	public static function fields( array $metaboxes ) {
+		
+		/*my changes start*/
+		/*
+		$metaboxes[ REALIA_PROPERTY_PREFIX . 'openhome' ] = array(
+			'id'                        => REALIA_PROPERTY_PREFIX . 'general',
+			'title'                     => __( 'Open Home Info', 'realia' ),
+			'object_types'              => array( 'property' ),
+			'context'                   => 'normal',
+			'priority'                  => 'high',
+			'show_names'                => true,
+			'fields'                    => array(
+				array( 
+					'name'              => __( 'open home date and time', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'testid',
+					'type'              => 'text',
+				),
+			),
+		);
+		
+		$metaboxes[ REALIA_PROPERTY_PREFIX . 'pamphlet' ] = array(
+			'id'                        => REALIA_PROPERTY_PREFIX . 'general',
+			'title'                     => __( 'Open Home Pamphlet Info', 'realia' ),
+			'object_types'              => array( 'property' ),
+			'context'                   => 'normal',
+			'priority'                  => 'high',
+			'show_names'                => true,
+			'fields'                    => array(
+				array( 
+					'name'              => __( 'rates', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'testid',
+					'type'              => 'text',
+				),
+			),
+		);*/
+		/*my changes end*/
+		
 		$metaboxes[ REALIA_PROPERTY_PREFIX . 'general' ] = array(
 			'id'                        => REALIA_PROPERTY_PREFIX . 'general',
 			'title'                     => __( 'General Options', 'realia' ),
@@ -83,6 +119,143 @@ class Realia_Post_Type_Property {
 			'priority'                  => 'high',
 			'show_names'                => true,
 			'fields'                    => array(
+	/*my changes start*/			
+				array( 
+					'name'              => __( 'Legal Description', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'legal_description',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'House Age', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'house_age',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'RV Land Value', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'rv_land',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'RV Improvements Value', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'rv_improvements',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'RV Total', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'rv_total',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'RV Date', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'rv_date',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Rates', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'rates',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Land Area (eg: "550m2 (Land Category TC2")', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'land_area_pamphlet',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Floor Area (eg: "157m2 (As supplied by Property Guru")', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'floor_area',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Construction Exterior (eg: "Brick")', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'construction_exterior',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Construction Joinery (eg: "Aluminium (single glaze)")', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'construction_joinery',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Construction Roof (eg: "Tile (concrete)")', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'construction_roof',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Bedroom 1 (eg: "4.2m x 3.5m DBIR")', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'bedroom_1',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Bedroom 2 (eg: "3.2m x 3.3m BIR")', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'bedroom_2',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Bedroom 3 (eg: "3.3m x 3.0m DBIR")', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'bedroom_3',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Bedroom 4 (eg: "3.2m x 3.3m BIR")', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'bedroom_4',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Bedroom 5 (eg: "4.2m x 3.5m DBIR")', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'bedroom_5',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Bedroom 6 (eg: "3.2m x 3.3m BIR")', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'bedroom_6',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Lounge/Living (eg: "6.5m x 4/0m, Open Plan with kitchen/dining. Heat Pump. Ranch Slider to Decking")', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'lounge_living',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Kitchen (eg: "Open plan. Formica bench, Pantry")', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'kitchen',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Bathroom 1 (eg: "Separate shower, Vanity, Built in bath, vanity")', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'bathroom_1',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Bathroom 2 (eg: "Separate shower, Vanity, Built in bath, vanity")', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'bathroom_2',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Ensuite (eg: "Separate shower, toilet, vanity, extractor")', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'ensuite',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Toilet (eg: "Separate toilet")', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'toilet',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Laundry (eg: "Super tub in garage")', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'laundry',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Garage (eg: "Internal access double. Auto Opener.")', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'garage',
+					'type'              => 'text',
+				),
+				array( 
+					'name'              => __( 'Chattels', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'chattels',
+					'type'              => 'textarea',
+				),
+	/*my changes end*/
 				array(
 					'name'              => __( 'ID', 'realia' ),
 					'id'                => REALIA_PROPERTY_PREFIX . 'id',
